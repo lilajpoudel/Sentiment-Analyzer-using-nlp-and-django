@@ -2,8 +2,54 @@
 <html>
 <head>
     <title>Sentiment Analyzer</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 400px;
+            margin: 60px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
 </head>
 <body>
+  <div class="container">
     <h1>Sentiment Analyzer</h1>
     <form method="post">
         {% csrf_token %}
@@ -14,5 +60,9 @@
     {% if result %}
         <h2>Predicted Sentiment: {{ result }}</h2>
     {% endif %}
+    <div class="footer">
+            Developed by: Lilaj Paudel, SOE, PU
+    </div>
+    
 </body>
 </html>
